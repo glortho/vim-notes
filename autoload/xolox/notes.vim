@@ -430,7 +430,7 @@ endfunction
 
 function! xolox#notes#search(bang, input) " {{{1
   " Search all notes for the pattern or keywords {input} (current word if none given).
-  try
+  "try
     let starttime = xolox#misc#timer#start()
     let input = a:input
     if input == ''
@@ -463,9 +463,9 @@ function! xolox#notes#search(bang, input) " {{{1
       endif
     endif
     call xolox#misc#timer#stop("notes.vim %s: Searched notes in %s.", g:xolox#notes#version, starttime)
-  catch /^Vim\%((\a\+)\)\=:E480/
-    call xolox#misc#msg#warn("notes.vim %s: No matches", g:xolox#notes#version)
-  endtry
+  "catch /^Vim\%((\a\+)\)\=:E480/
+    "call xolox#misc#msg#warn("notes.vim %s: No matches", g:xolox#notes#version)
+  "endtry
 endfunction
 
 function! s:tag_under_cursor() " {{{2
